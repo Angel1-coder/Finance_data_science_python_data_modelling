@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 No problem! Here's the `README.md` file for your project, presented clearly and concisely.
 
 # Dividend Data Analysis for Last 6 Months
@@ -89,3 +90,6 @@ Evangelos Anthony Dimitras
 
 
 
+=======
+# Finance_data_science_python_data_modelling
+>>>>>>> 1efb3a22bf8e1f6007f38e4ebe7411f30a0c01cc
