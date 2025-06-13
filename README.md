@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-No problem! Here's the `README.md` file for your project, presented clearly and concisely.
-
 # Dividend Data Analysis for Last 6 Months
 
 This Python project fetches and analyzes dividend payments for a specified stock ticker symbol over the last 6 months using the `yfinance` library.
@@ -78,6 +75,101 @@ Make sure you have:
 
 ---
 
+---
+### Visualizations
+
+Here are the generated charts demonstrating the dividend distributions:
+
+**total_dividend_payout:**
+![total_dividend payout.png](total_dividend_payout.png)
+
+**Comparison of Top Dividend Stocks:**
+![Top_Ten_dividend_stocks_comparison](topten_dividend_stocks_comparison.png)
+
+**Average, Median & Dividend Summ:**
+![AVG_MEDIAN_DIV_SUM.png](AVG_MEDIAN_DIV_SUM.png)
+---
+
+## Testing
+
+
+Testing
+We put this app through its paces to make sure it runs smoothly, handles things well, and sticks to good coding practices.
+
+1. How We Tested It (Manual Testing)
+We manually ran the app from the command line and tried out different scenarios:
+
+Checking Ticker Symbols:
+
+We used various real stock tickers (like AAPL, MSFT, etc.) to make sure the dividend data showed up correctly and all the calculations (total, average, median, quarterly sums) were spot on.
+
+Trying the Comparison:
+
+We chose to compare stocks, and the app correctly fetched and showed the comparison data, creating that dividend_comparison.csv file with accurate info.
+
+Plotting Charts:
+
+When we ran the app on our local machine, the dividend charts popped right up as expected.
+
+When we ran it on Heroku (where there's no visual display), we confirmed the charts were saved as PNG image files, and the terminal let us know they were saved.
+
+Handling Tricky Inputs:
+
+We threw in some fake ticker symbols (like XYZABC) to ensure the app wouldn't crash and would politely tell us if it couldn't find data.
+
+We also tried tickers with no recent dividends, making sure the app gave us the right "No dividends found" message.
+
+If we typed anything other than 'y' or 'n' for the comparison, the app simply skipped the comparison, which is exactly what we wanted.
+
+2. Keeping the Code Clean (PEP8 Validation)
+We regularly checked the code using the PEP8 Online Validator to ensure it followed Python's style guidelines.
+
+We fixed all the "line too long" warnings by neatly breaking up longer lines.
+
+We cleaned up any extra spaces that shouldn't have been there.
+
+We made sure every file ended with a blank line and that comments had proper spacing.
+
+In the end, the code now passes the PEP8 validator with no major issues.
+
+3. Deploying and Checking (Deployment Testing)
+We deployed the app to Heroku, our chosen cloud platform, following the steps outlined in the "Deployment" section.
+
+We watched the build logs on Heroku's dashboard to confirm that all the necessary Python libraries (like matplotlib) were installed correctly during the build.
+
+We then ran the app on Heroku using heroku run python main.py --app stock-dividend-app-python and confirmed it worked perfectly, just like it did locally.
+
+As mentioned, when running on Heroku, the charts were saved as image files instead of popping up, which was confirmed in the terminal output.
+
+---
+
+## Deployment
+
+
+This command-line application can be deployed to a cloud platform like Heroku to run it remotely.
+
+Heroku Deployment Steps
+Prepare Heroku: Sign up for an account at heroku.com, then install the Heroku CLI and log in via your terminal:
+
+heroku login
+
+Configure for Deployment: Create a Procfile in your project's root directory. This file tells Heroku how to manage your application's processes and ensures dependencies are installed during deployment. Add the following line:
+
+release: python -m pip install -r requirements.txt
+
+Create & Deploy App: Create a new Heroku application and push your code from your main branch to Heroku.
+
+heroku create your-app-name # Replace 'your-app-name' with a unique name
+git push heroku main
+
+Run the Application: Since this is a command-line application, you'll execute it on Heroku as a one-off dyno to interact with it directly from your terminal:
+
+heroku run python main.py --app stock-dividend-app-python
+
+The application's prompts and analysis results will appear directly in your local terminal.
+
+---
+
 ## Notes
 
 * **Data Availability:** Dividend data relies on availability from Yahoo Finance. Some stocks may have incomplete or missing historical dividend information.
@@ -90,6 +182,3 @@ Evangelos Anthony Dimitras
 
 
 
-=======
-# Finance_data_science_python_data_modelling
->>>>>>> 1efb3a22bf8e1f6007f38e4ebe7411f30a0c01cc
