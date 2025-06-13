@@ -22,7 +22,7 @@ Follow these steps to get the project up and running on your local machine.
 
 Make sure you have:
 
-* **Python 3.7 or higher**
+* **`Python 3.12.8`** (or a compatible version that matches your local environment)
 * **`yfinance`**
 * **`pandas`**
 * **`matplotlib`**
